@@ -15,7 +15,7 @@ const config: Config = {
   url: 'https://tehreem-asghar.github.io',
 
   // 🔥 Your repo name as base URL
-  baseUrl: 'https://physical-ai-robotic-book-hackathon.vercel.app/',
+  baseUrl: '/https://physical-ai-robotic-book-hackathon.vercel.app/',
 
   // 🔥 GitHub configuration
   organizationName: 'Tehreem-Asghar',
