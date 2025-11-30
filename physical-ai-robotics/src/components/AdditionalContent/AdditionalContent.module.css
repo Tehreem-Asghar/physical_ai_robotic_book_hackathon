@@ -1,0 +1,68 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.additionalContent {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color-secondary); /* Match ComparisonSection's background */
+}
+
+.additionalContent h2 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.additionalContent p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  color: var(--ifm-font-color-base); /* Ensure text color is consistent */
+}
+
+.additionalContent .row {
+  display: flex;
+  justify-content: center; /* Center items for better aesthetic */
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.additionalContent .col {
+  flex: 1; /* Allow flex to manage width */
+  min-width: 300px; /* Similar to ComparisonSection columns */
+  max-width: 450px; /* Similar to ComparisonSection columns */
+  box-sizing: border-box;
+  padding: 1.5rem; /* Match ComparisonSection padding */
+  background-color: var(--ifm-background-color);
+  border-radius: 12px; /* Match ComparisonSection border-radius */
+  box-shadow: var(--ifm-global-shadow-lw); /* Match ComparisonSection shadow */
+  border: 1px solid var(--ifm-color-emphasis-300); /* Match ComparisonSection border */
+  transition: transform 0.3s ease;
+}
+
+.additionalContent .col:hover {
+  transform: translateY(-5px);
+}
+
+.additionalContent h3 {
+  color: var(--ifm-color-emphasis-800);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center; /* Center feature titles */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .additionalContent .col {
+    flex: 1 1 calc(50% - 2rem); /* Two columns on medium screens */
+    max-width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .additionalContent .col {
+    flex: 1 1 calc(100% - 2rem); /* One column on small screens */
+    max-width: calc(100% - 2rem);
+  }
+}
