@@ -1,23 +1,112 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+html, body {
+  overflow-x: hidden;
+}
 
 .heroBanner {
   padding: 4rem 0;
-  text-align: center;
+  text-align: left; /* Changed from center */
   position: relative;
   overflow: hidden;
+  background: linear-gradient(180deg, var(--ifm-color-primary-darkest), var(--ifm-color-primary));
 }
+
+.heroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* For responsive behavior */
+}
+
+.heroText {
+  flex: 1;
+  padding-right: 2rem;
+  max-width: 600px;
+}
+
+.heroImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.imagePlaceholder {
+  border: 2px dashed var(--ifm-color-primary-lighter);
+  border-radius: 12px;
+  width: 300px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--ifm-color-primary-lighter);
+  font-size: 1.2rem;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.bookCoverImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 997px) {
+  .bookCoverImage {
+    max-height: 500px; /* Adjust as needed */
+    width: auto; /* Allow width to adjust based on height */
+  }
+}
+
 
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+    text-align: center;
   }
+  .heroContainer {
+    flex-direction: column;
+  }
+  .heroText {
+    padding-right: 0;
+    margin-bottom: 2rem;
+    max-width: 100%; /* Ensure text takes full width */
+  }
+  .heroImage {
+    min-width: unset; /* Remove min-width restriction */
+    width: 100%; /* Allow image to take full width */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heroBanner {
+    padding: 1rem; /* Further reduce padding for very small screens */
+  }
+  .heroContainer {
+    flex-direction: column; /* Ensure elements stack vertically */
+  }
+  .heroText {
+    padding-right: 0;
+    margin-bottom: 1rem;
+    max-width: 100%; /* Ensure text takes full width */
+  }
+  .heroImage {
+    min-width: unset; /* Remove min-width restriction */
+    width: 100%; /* Allow image to take full width */
+  }
+
+ 
 }
 
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Changed from center */
+}
+
+@media screen and (max-width: 996px) {
+  .buttons {
+    justify-content: center;
+  }
 }
