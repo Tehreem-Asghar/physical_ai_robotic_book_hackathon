@@ -18,7 +18,7 @@ interface ChatResponse {
   sources: string[];
 }
 
-const API_BASE_URL = 'http://127.0.0.1:8000'; // Assuming FastAPI runs on port 8000
+const API_BASE_URL = 'https://physical-ai-robotic-book-hackathon-delta.vercel.app/'; // Assuming FastAPI runs on port 8000
 
 const ChatWidget: React.FC = () => {
   const [input, setInput] = useState('');

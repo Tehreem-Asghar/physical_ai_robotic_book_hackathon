@@ -8,6 +8,7 @@ origins = [
     "http://localhost:3000",  # Docusaurus frontend
     "http://127.0.0.1:3000",  # Another common local development address
     "http://127.0.0.1:8000",
+    "https://physical-ai-robotic-book-hackathon-delta.vercel.app/"
 ]
 
 app.add_middleware(
