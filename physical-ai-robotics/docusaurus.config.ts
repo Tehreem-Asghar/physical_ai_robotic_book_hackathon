@@ -60,9 +60,16 @@ const config: Config = {
       title: 'Physical AI & Robotics',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/docusaurus.png',
       },
-      items: [],
+      items: [
+          {
+          to: '/docs/intro', // Link to the new chatbot page
+          label: 'Reading',
+          position: 'left',
+        },
+
+      ],
     },
     footer: {
       style: 'dark',

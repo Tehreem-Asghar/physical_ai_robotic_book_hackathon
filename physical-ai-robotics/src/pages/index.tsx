@@ -8,6 +8,7 @@ import ComparisonSection from '@site/src/components/ComparisonSection';
 import AdditionalContent from '@site/src/components/AdditionalContent';
 import Heading from '@theme/Heading';
 
+
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -49,6 +50,7 @@ export default function Home(): ReactNode {
         <HomepageFeatures />
         <ComparisonSection />
         <AdditionalContent />
+
       </main>
     </Layout>
   );
